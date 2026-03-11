@@ -1,0 +1,175 @@
+@import url('../variable.css');
+@import url('../layout.css');
+
+.main-game {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-informations {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.block-left {
+  display: flex;
+  gap: 1em;
+}
+
+.button-level,
+.button-countdown {
+  background: var(--bg);
+  color: var(--font-color);
+  font-family: var(--font-family);
+}
+
+.block-right {
+  display: flex;
+  gap: 1em;
+}
+
+.icon-button {
+  color: var(--font-color);
+  font-family: var(--font-family);
+  cursor: var(--pointer);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size);
+}
+
+.section-game,
+#game-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#maze {
+  display: block;
+  width: min(100%, 520px);
+  height: auto;
+}
+
+#chest-sprite,
+#bonus-sprite,
+#malus-sprite {
+  display: block;
+}
+
+.sprite {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+#player-sprite {
+  position: absolute;
+  image-rendering: pixelated;
+  background: no-repeat;
+  transform: scale(2);
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes playerAnim {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: calc(-1 * 6 * 48);
+  }
+}
+
+#player-sprite img {
+  width: 48px;
+  height: 48px;
+  z-index: 2;
+}
+
+#door-sprite img {
+  width: 25px;
+  height: 25px;
+  padding-top: 15%;
+  z-index: 1;
+}
+
+[id^='enemy-sprite-'] img {
+  transform: scale(0.25);
+}
+#key-sprite img {
+  width: 25px;
+  height: 25px;
+  border-radius: 75%;
+  padding-top: 15%;
+  z-index: 1;
+}
+
+#chest-sprite img,
+.extra-chest img,
+#bonus-sprite img,
+#malus-sprite img {
+  width: 25px;
+  height: 25px;
+  border-radius: 75%;
+  padding-top: 15%;
+}
+
+.pop-up {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.85);
+  color: #00ff78;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.pop-up-chest {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg);
+  color: var(--font-color);
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  border: 2px solid #000;
+  box-shadow: var(--modal-box-shadow);
+  font-family: var(--font-family);
+  font-size: var(--modal-font-size);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+#chronometer {
+  margin-left: 8px;
+  font-weight: 700;
+  color: lime;
+  text-shadow: 0 0 5px rgba(50, 255, 50, 1);
+  transition: color 0.3s ease;
+}
+
+#chronometer.warning {
+  color: yellow;
+  text-shadow: 0 0 5px rgba(255, 255, 0, 1);
+  transition: color 0.3s ease;
+}
+
+#chronometer.critical {
+  color: red;
+  text-shadow: 0 0 5px rgba(255, 20, 0, 1);
+  transition: color 0.3s ease;
+}

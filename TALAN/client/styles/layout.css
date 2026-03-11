@@ -1,0 +1,45 @@
+@import url('variable.css');
+
+.body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.body-container {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  background: var(--bg);
+  border-radius: var(--border-radius);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7.5vh;
+  padding: var(--padding);
+}
+
+.header-logo {
+  height: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2.5vh;
+  padding: var(--padding);
+}
+
+.footer-copyright {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  color: var(--font-color);
+}

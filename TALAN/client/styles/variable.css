@@ -1,0 +1,18 @@
+:root {
+  --bg: rgba(0, 0, 0, 0.75);
+  --font-color: rgb(0, 255, 0);
+  --button-color: rgb(0, 255, 0);
+  --font-size: 1em;
+  --font-family: 'Orbitron', sans-serif, normal;
+  --border-radius: 0.5em;
+  --border: rgb(0, 255, 0);
+  --padding: 0.5em;
+  --pointer: pointer;
+  --modal-width: 35%;
+  --modal-height: 35%;
+  --modal-font-size: 0.75em;
+  --modal-font-size-button: 1.5em;
+  --modal-font-size-icon: 2.5em;
+  --modal-box-shadow: 0 0 30px var(--border);
+  --modal-z-index: 9999;
+}

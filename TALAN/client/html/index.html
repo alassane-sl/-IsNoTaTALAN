@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>!isNoTaTALAN</title>
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="icon" type="image/x-icon" href="./public/images/logo.png" />
+    <link rel="stylesheet" href="../styles/pages/index.css" />
+    <link rel="stylesheet" href="../styles/modal/tutorial.css" />
+    <link rel="stylesheet" href="../styles/modal/rules.css" />
+    <link rel="stylesheet" href="../styles/modal/pause.css" />
+    <link rel="stylesheet" href="../styles/modal/quit.css" />
+    <link rel="stylesheet" href="../styles/modal/win.css" />
+    <link rel="stylesheet" href="../styles/modal/finalWin.css" />
+    <link rel="stylesheet" href="../styles/modal/redirectionWin.css" />
+    <link rel="stylesheet" href="../styles/modal/wantToContinue.css" />
+    <link rel="stylesheet" href="../styles/modal/lose.css" />
+    <link rel="stylesheet" href="../styles/modal/retry.css" />
+    <link rel="stylesheet" href="../styles/globals.css" />
+
+    <link rel="stylesheet" href="../styles/pages/matrix.css" />
+  </head>
+  <body class="body">
+    <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+    <audio id="musique" src="../public/audio/binary-code.mp3"></audio>
+    <section class="body-container">
+      <header class="header">
+        <img class="header-logo" src="../public/images/logo.png" alt="logo" />
+      </header>
+      <main class="main-game">
+        <section class="section-informations">
+          <div class="block-left">
+            <button class="button-level">
+              NIVEAU : <span id="level-display">1</span>
+            </button>
+            <button class="button-countdown">
+              TEMPS : <span id="chronometer"></span>
+            </button>
+          </div>
+          <div class="block-right">
+            <button class="icon-button" id="power-button">⏻</button>
+            <button class="icon-button" id="break-button">⏸</button>
+            <button class="icon-button" id="sound-button">🔇</button>
+          </div>
+        </section>
+        <section class="section-game" id="game-area">
+          <canvas id="maze"></canvas>
+          <div id="player-sprite" class="sprite">
+            <img />
+          </div>
+          <div id="enemy-sprite" class="sprite">
+            <img src="../public/images/ghost.png" alt="enemy" />
+          </div>
+          <div id="door-sprite" class="sprite">
+            <img src="../public/images/door.jpg" alt="door" />
+          </div>
+          <div id="key-sprite" class="sprite">
+            <img src="../public/images/key.gif" alt="key" />
+          </div>
+          <div id="chest-sprite" class="sprite">
+            <img src="../public/images/chest.png" />
+          </div>
+          <div id="bonus-sprite" class="sprite">
+            <img src="../public/images/chest.png" />
+          </div>
+          <div id="malus-sprite" class="sprite">
+            <img src="../public/images/chest.png" />
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer-copyright">
+          © 2026 !isNoTaTALAN || TOUS DROITS RÉSERVÉS.
+        </p>
+      </footer>
+    </section>
+  </body>
+  <script src="../js/matrix.js"></script>
+  <script src="../js/index.js" type="module"></script>
+</html>
