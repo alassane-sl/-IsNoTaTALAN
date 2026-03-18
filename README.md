@@ -75,7 +75,7 @@ Objectif principal :
 
 ```text
 .
-├── api/        # API Express
+├── api/        # API Express(annulé)
 ├── client/     # Jeu côté front
 │   ├── html/   # Pages HTML
 │   ├── js/     # Logique JavaScript
@@ -94,18 +94,8 @@ Le jeu front-end se lance depuis l'écran d'accueil :
 - ouvrir `client/html/welcome.html` avec une extension comme Live Server dans VS Code,
 - ou servir le dossier `client` avec un serveur statique local.
 
-Le dépôt contient déjà une configuration Live Server sur le port `5501`.
-
-### 2. Lancer l'API Express
-
-Depuis le dossier `api` :
-
-```bash
-npm install
-npm start
-```
-
-L'API démarre par défaut sur le port `3000`.
+Le jeu est aussi disponible sur le site 
+https://isnotatalan.fr
 
 ## Parcours joueur
 
