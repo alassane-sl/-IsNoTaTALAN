@@ -115,5 +115,6 @@ https://isnotatalan.fr
 - compatibilité mobile ou support manette
 
 ## Auteur
+Alassane Sall
 
 Projet réalisé dans le cadre d'un jeu de labyrinthe procédural en JavaScript.
